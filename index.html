@@ -7,7 +7,7 @@
 
 <style>
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
         background: #f8f9fc;
         margin: 0;
         padding: 0;
@@ -21,7 +21,7 @@
     }
     h1 {
         margin: 0;
-        font-size: 40px;
+        font-size: 42px;
         font-weight: 700;
     }
     .subtitle {
@@ -30,11 +30,11 @@
         opacity: 0.85;
     }
     .container {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 40px auto;
         padding: 20px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 24px;
     }
     .card {
@@ -42,14 +42,6 @@
         padding: 24px;
         border-radius: 16px;
         box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .card h2 {
-        margin-top: 0;
-        font-size: 22px;
-        color: #2563eb;
     }
     .button {
         display: inline-block;
@@ -65,9 +57,28 @@
     .button:hover {
         background: #1e40af;
     }
+    .summary-row {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .summary-col {
+        flex: 1;
+        min-width: 260px;
+        background: #f1f5ff;
+        padding: 18px;
+        border-radius: 12px;
+        border-left: 4px solid #2563eb;
+    }
+    .summary-col strong {
+        font-size: 17px;
+        color: #1e3a8a;
+    }
     ul {
         padding-left: 18px;
         line-height: 1.6;
+        margin-top: 8px;
     }
     footer {
         text-align: center;
@@ -83,44 +94,80 @@
 
 <header>
     <h1>Play Store App Review Analysis</h1>
-    <p class="subtitle">Data Science Capstone Project | App Performance, User Behavior & Monetization Insights</p>
+    <p class="subtitle">Data Science Capstone Project | Insights for Growth & Monetization</p>
 </header>
 
 <div class="container">
 
-    <div class="card">
-        <h2>📌 Project Summary</h2>
-        <p>This project analyzes Google Play Store applications (10,841 apps, 13 attributes) to uncover key growth and monetization drivers. The workflow includes data collection, cleaning, wrangling, and exploratory data analysis for business insights.</p>
-    </div>
+    <!-- HORIZONTAL SUMMARY SECTION -->
+    <div class="card" style="grid-column: 1 / -1;">
+        <h2>📌 Business Impact & Strategy Summary</h2>
+        <div class="summary-row">
 
-    <div class="card">
-        <h2>📂 Download Datasets</h2>
-        <p>Access project datasets used in the analysis.</p>
-        <div>
-            <a class="button" href="Play Store Data.csv" target="_blank">⬇ Play Store Data.csv</a><br><br>
-            <a class="button" href="User Reviews.csv" target="_blank">⬇ User Reviews.csv</a>
+            <div class="summary-col summary-col-1">
+                <strong>User Acquisition & Market Reach</strong>
+                <ul>
+                    <li>Capitalize on <strong>free apps (92% market share)</strong> to drive mass installs and boost Play Store visibility.</li>
+                    <li>Scale fastest in <strong>Games, Social, Communication, and Productivity</strong> — high installs + strong ratings make them low-risk growth engines.</li>
+                    <li>Focus on <strong>“Everyone” rated apps</strong> for maximum audience penetration and acquisition efficiency.</li>
+                </ul>
+            </div>
+
+            <div class="summary-col summary-col-2">
+                <strong>Revenue Growth & Monetization</strong>
+                <ul>
+                    <li>Launch <strong>niche premium apps (Teen, 17+)</strong> to capture loyal, high-value users.</li>
+                    <li>Introduce <strong>affordable premium tiers</strong> to leverage install-price correlation — low entry cost, upsell later.</li>
+                    <li>Invest in <strong>high-install premium apps</strong> where revenue potential and customer satisfaction align.</li>
+                </ul>
+            </div>
+
+            <div class="summary-col summary-col-3">
+                <strong>Retention & Customer Satisfaction</strong>
+                <ul>
+                    <li>Balance portfolio: <strong>Games for reach</strong>, <strong>Tools/Productivity for loyalty</strong> to reduce churn.</li>
+                    <li>Maintain <strong>lightweight or variably sized apps</strong> to scale in storage-limited markets.</li>
+                    <li>Protect satisfaction by reinforcing <strong>user-friendly, engaging, low-cost design</strong> — already proven by <strong>64% positive reviews</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="summary-col summary-col-4">
+                <strong>Strategic Positioning</strong>
+                <ul>
+                    <li>Design <strong>scalable, flexible app architectures</strong> for long-term growth.</li>
+                    <li>Apply <strong>data-driven segmentation</strong>: free for reach, niche premium for loyalty, hybrid pricing for monetization.</li>
+                    <li>Align acquisition, retention, and revenue into a unified sustainable growth loop.</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 
+    <!-- DATA DOWNLOAD CARD -->
     <div class="card">
-        <h2>📘 Jupyter Notebook</h2>
-        <p>Open the notebook with GitHub's viewer:</p>
-        <div>
-            <a class="button" href="./app_analysis_capstone.ipynb" target="_blank">
-                📘 View Notebook (.ipynb)
-            </a>
-        </div>
+        <h2>📂 Datasets</h2>
+        <p>Download the project datasets used for analysis and modeling.</p>
+        <a class="button" href="Play Store Data.csv" target="_blank">⬇ Play Store Data.csv</a><br><br>
+        <a class="button" href="User Reviews.csv" target="_blank">⬇ User Reviews.csv</a>
     </div>
 
+    <!-- NOTEBOOK VIEW CARD -->
     <div class="card">
-        <h2>🔗 GitHub Repository</h2>
-        <p>Explore the full project source code.</p>
+        <h2>📘 Notebook</h2>
+        <p>View the full analysis on GitHub:</p>
+        <a class="button" href="./app_analysis_capstone.ipynb" target="_blank">📘 View Notebook (.ipynb)</a>
+    </div>
+
+    <!-- REPO LINK CARD -->
+    <div class="card">
+        <h2>🔗 Repository</h2>
+        <p>Explore the complete project source code and workflow.</p>
         <a class="button" href="https://github.com/shubham-walnut-kernels/Play-Store-App-Review-Analysis" target="_blank">🔍 View on GitHub</a>
     </div>
 
 </div>
 
-<footer>© 2025 Shubham – Play Store App Review Analysis</footer>
+<footer>© 2025 Shubham – Play Store App Review Analysis Project</footer>
 
 </body>
 </html>
