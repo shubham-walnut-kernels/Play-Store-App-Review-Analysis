@@ -62,21 +62,16 @@ Matplotlib, Seaborn
 
 Jupyter Notebook / Google Colab
 
-🔗 Project Links
-📘 Notebook
+## 🔗 Project Links
 
-View the complete analysis notebook:
-👉 View Notebook
+📘 **Notebook**  
+[View the full analysis on Google Colab](https://colab.research.google.com/drive/1ZlTZQbEntGfQihbIRC6qNDxMkqMP1s0g?usp=drive_link)
 
-📂 Dashboard
+📂 **Dashboard**  
+[View interactive dashboard with business insights](https://app.thebricks.com/file/de3b4daf-4a76-475c-8e65-0d9caff4ef49)
 
-Interactive dashboard showcasing business insights:
-👉 View Dashboard
-
-🔗 Repository
-
-Explore the full project source code:
-👉 View on GitHub
+🔍 **Repository**  
+[Explore the complete source code](https://github.com/shubham-walnut-kernels/Play-Store-App-Review-Analysis)
 
 📌 Conclusion
 
